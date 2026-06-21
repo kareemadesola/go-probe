@@ -4,6 +4,13 @@ A lightweight HTTP endpoint health checker written in Go. Concurrently probes a 
 
 Built as a learning project while exploring Go — directly motivated by observability work at WebMD involving Grafana dashboards and Kubernetes-based pipelines.
 
+## Live Demo
+
+Deployed on Hugging Face Spaces: **https://kareemadesola-go-probe.hf.space**
+
+- `/metrics` — Prometheus output
+- `/status` — JSON health status
+
 ## Features
 
 - Concurrent probing via goroutines — all targets are checked simultaneously
