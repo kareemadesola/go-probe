@@ -1,0 +1,4 @@
+[deploy]
+startCommand = "./go-probe --targets=https://example.com,https://google.com,https://github.com --interval=30s --addr=:8080"
+healthcheckPath = "/"
+healthcheckTimeout = 10
