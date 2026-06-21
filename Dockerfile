@@ -9,5 +9,7 @@ FROM alpine:3.19
 RUN apk --no-cache add ca-certificates
 WORKDIR /app
 COPY --from=builder /app/go-probe .
+COPY --from=builder /app/entrypoint.sh .
+RUN chmod +x entrypoint.sh
 EXPOSE 8080
-ENTRYPOINT ["./go-probe"]
+ENTRYPOINT ["sh", "entrypoint.sh"]

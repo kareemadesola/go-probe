@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: go-probe
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: 8080
+    startCommand: >
+      ./go-probe
+      --targets=https://example.com,https://google.com,https://github.com
+      --interval=30s
+      --addr=:8080
